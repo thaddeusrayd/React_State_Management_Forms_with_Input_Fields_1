@@ -10,7 +10,10 @@ function DogForm() {
   const handleAgeChange = (event) => setAge(event.target.value);
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(name);
+    console.log(name, breed, age);
+    setName("");
+    setBreed("");
+    setAge("");
   };
 
   return (
@@ -32,7 +35,7 @@ function DogForm() {
           type="text"
           name="breed"
           onChange={handleBreedChange}
-          value={name}
+          value={breed}
         />
       </label>
       <label htmlFor="age">
